@@ -1,0 +1,87 @@
+{
+    "users": [
+        {
+            "id":1,
+            "email":"admin@dshop.com",
+            "password":1234,
+            "role": "admin"
+
+        },
+          {
+            "id":2,
+            "email":"seller@dshop.com",
+            "password":321,
+            "role": "seller"
+
+        },
+          {
+            "id":3,
+            "email":"seller2@dshop.com",
+            "password":4321,
+            "role": "seller"
+
+        },
+          {
+            "id": 4,
+            "email": "client1@dshop.com",
+            "password": 1111,
+            "role": "client"
+        },
+          {
+            "id": 5,
+            "email": "client2@dshop.com",
+            "password": 2222,
+            "role": "client"
+        },
+          {
+            "id": 6,
+            "email": "client3@dshop.com",
+            "password": 3333,
+            "role": "client"
+        }
+    ],
+    "products": [
+    {
+      "id": 1,
+      "type": "mouse",
+      "stock": 10,
+      "price": 1000,
+      "url": "https://www.macrosistemas.com/wp-content/uploads/1337-1.jpg"
+    },
+    {
+      "id": 2,
+      "type": "keyboard",
+      "stock": 15,
+      "price": 2500,
+      "url": "https://cdn11.bigcommerce.com/s-g9br3/images/stencil/2048x2048/products/845/4575/Mech-kb_Front_WP__11847.1659653762.jpg?c=2"
+    },
+    {
+      "id": 3,
+      "type": "monitor",
+      "stock": 8,
+      "price": 12000,
+      "url": "https://media.alquimio.cloud/images/@thumbs_1200_7a97940b2152368a49ac523c5eda3944ef71001e.webp"
+    },
+    {
+      "id": 4,
+      "type": "headphones",
+      "stock": 20,
+      "price": 3000,
+      "url": "https://cubitt.com.co/cdn/shop/files/CT-PWANCL1.webp?v=1762340496&width=2048"
+    },
+    {
+      "id": 5,
+      "type": "webcam",
+      "stock": 12,
+      "price": 1800,
+      "url": "https://www.kelyx.com.ar/images/000000000041730228266webcam-kelyx-1.jpg"
+    },
+    {
+      "id": 6,
+      "type": "laptop stand",
+      "stock": 25,
+      "price": 900,
+      "url": "https://audioluces.com/wp-content/uploads/2023/10/Reloop-laptop-Stand-v.2-Base-para-PC-portatil_0000-650x650.jpg"
+    }
+  ]
+}

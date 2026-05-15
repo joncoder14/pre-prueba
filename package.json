@@ -1,0 +1,16 @@
+{
+  "name": "preprueba",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "server": "json-server --watch db.json --port 3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "json-server": "^0.17.4"
+  }
+}
