@@ -1,53 +1,49 @@
 {
-    "users": [
-        {
-            "id":1,
-            "email":"admin@dshop.com",
-            "password":1234,
-            "role": "admin"
-
-        },
-          {
-            "id":2,
-            "email":"seller@dshop.com",
-            "password":321,
-            "role": "seller"
-
-        },
-          {
-            "id":3,
-            "email":"seller2@dshop.com",
-            "password":4321,
-            "role": "seller"
-
-        },
-          {
-            "id": 4,
-            "email": "client1@dshop.com",
-            "password": 1111,
-            "role": "client"
-        },
-          {
-            "id": 5,
-            "email": "client2@dshop.com",
-            "password": 2222,
-            "role": "client"
-        },
-          {
-            "id": 6,
-            "email": "client3@dshop.com",
-            "password": 3333,
-            "role": "client"
-        }
-    ],
-    "products": [
+  "users": [
     {
       "id": 1,
-      "type": "mouse",
-      "stock": 10,
-      "price": 1000,
-      "url": "https://www.macrosistemas.com/wp-content/uploads/1337-1.jpg"
+      "name": "andres",
+      "email": "admin@dshop.com",
+      "password": "1234",
+      "role": "admin"
     },
+    {
+      "id": 2,
+      "name": "alejandro",
+      "email": "seller@dshop.com",
+      "password": "321",
+      "role": "seller"
+    },
+    {
+      "id": 3,
+      "name": "maria",
+      "email": "seller2@dshop.com",
+      "password": "4321",
+      "role": "seller"
+    },
+    {
+      "id": 4,
+      "name": "pedro",
+      "email": "client1@dshop.com",
+      "password": "1111",
+      "role": "client"
+    },
+    {
+      "id": 5,
+      "name": "pepe",
+      "email": "client2@dshop.com",
+      "password": "2222",
+      "role": "client"
+    },
+    {
+      "id": 6,
+      "name": "juan",
+      "email": "client3@dshop.com",
+      "password": "3333",
+      "role": "client"
+    }
+  ],
+  "products": [
     {
       "id": 2,
       "type": "keyboard",
@@ -82,6 +78,13 @@
       "stock": 25,
       "price": 900,
       "url": "https://audioluces.com/wp-content/uploads/2023/10/Reloop-laptop-Stand-v.2-Base-para-PC-portatil_0000-650x650.jpg"
+    },
+    {
+      "type": "tablet",
+      "stock": "10",
+      "price": "30000",
+      "url": "https://tse4.mm.bing.net/th/id/OIP.hWhplrvUYJXa_VY-qRpRWwHaFp?r=0&cb=thfc1falcon&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "id": 7
     }
   ]
 }

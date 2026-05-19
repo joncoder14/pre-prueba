@@ -1,24 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script defer src="main.js"></script>
-</head>
-<body>
-    <div id="container"
-     class="w-screen h-screen bg-neutral-300 flex justify-center items-center">
-        <form id="form"
-        class=" p-10 gap-3 bg-neutral-400  rounded-lg flex flex-col text-lg">
-            <label class=" capitalize text-lg ">email</label>
-            <input class="bg-gray-300  border rounded-lg capitalize p-2 text-lg" placeholder="enter email" type="email" name="email">
-            <label class="capitalize text-lg ">password</label>
-            <input class="bg-gray-300  border rounded-lg capitalize p-2 text-lg" placeholder="enter password" type="password" name="password">
-            <button class="uppercase mt-3 w-full bg-slate-700 p-2 rounded-lg active:bg-slate-900 active:text-slate-100 active:scale-110 transition
-             md: hover:bg-slate-900 hover:text-slate-100 hover:scale-110 transition">login</button>
-        </form>
+  </head>
+  <body>
+    <div
+      id="container"
+      class="w-screen h-screen bg-neutral-300 flex justify-center items-center"
+    >
+      <form
+        id="form"
+        class="p-10 gap-3 bg-neutral-100 rounded-lg flex flex-col text-lg"
+      >
+        <label class="capitalize text-lg">email</label>
+        <input
+          class="bg-gray-300 border rounded-lg p-2 text-lg"
+          placeholder="enter email"
+          type="email"
+          name="email"
+        />
+        <label class="capitalize text-lg">password</label>
+        <input
+          class="bg-gray-300 border rounded-lg p-2 text-lg"
+          placeholder="enter password"
+          type="password"
+          name="password"
+        />
+        <button
+          class="uppercase mt-3 w-full bg-slate-700 p-2 rounded-lg active:bg-slate-900 active:text-slate-100 active:scale-110 transition md: hover:bg-slate-900 hover:text-slate-100 hover:scale-110 transition"
+        >
+          login
+        </button>
+      </form>
     </div>
-</body>
+    <div id="client"></div>
+  </body>
 </html>
