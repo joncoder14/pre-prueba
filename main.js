@@ -3,6 +3,15 @@ const container = document.getElementById("container");
 const countentContainer = container.innerHTML;
 const client = document.getElementById("client");
 
+let savedUser = JSON.parse(localStorage.getItem("user"));
+console.log(savedUser)
+if(savedUser?.role === "client") {
+  await renderClient()
+} else if (savedUser?.role === "seller" || savedUser?.role === "admin") {
+  await renderSellerorAdmin(savedUser.role)
+  console.log("hola")
+}
+
 async function getProducts() {
   try {
     const respone = await fetch("http://localhost:3000/products");
@@ -87,14 +96,16 @@ async function renderClient() {
   btnLogout.addEventListener("click", () => {
     container.classList.toggle("hidden");
     client.innerHTML = ` `;
+    localStorage.clear()
   });
 }
 
-async function renderSeller() {
+async function renderSellerorAdmin(isAdmin) {
   const products = await getProducts();
   client.innerHTML = ` <div class="fixed w-full bg-orange-500 flex justify-between items-center p-7  items-center">
     <h1 class="text-3xl">shooping</h1>
     <div class="flex justify-between w-35 md:w-60">
+    ${isAdmin === "admin" ? '<button type=button id="show-users"class="bg-slate-900 text-white p-1 w-15  rounded ">show users </button>' : ""}
        <button id="add-product"
        type=button
         class="rounded bg-slate-100 p-1 w-18 md:w-30">
@@ -127,7 +138,12 @@ async function renderSeller() {
         </div>
    
     </form>
-   
+     </div class="w-full">
+     <div id="overlay-users" class="hidden fixed inset-0 bg-black/50">    </div>
+    <div id="users-modal" class=" hidden flex flex-col items-center gap-5 bg-slate-200 fixed  h-100  bg-white flex justify-self-center m-35"> 
+    <div id="data" class="w-full p-4"></div>
+    <button type=button id="exit-user" class="rounded bg-red-500 w-40 p-1">exit</button>
+    </div>
    `;
   const addProduct = document.getElementById("add-product");
   const overlay = document.getElementById("overlay");
@@ -135,6 +151,38 @@ async function renderSeller() {
   const addButton = document.getElementById("add-button");
   const exitBtn = document.getElementById("exit-btn");
   const formProduct = document.getElementById("form-product");
+  const showUsers = document.getElementById("show-users");
+  const usersModal = document.getElementById("users-modal");
+  const exitUser = document.getElementById("exit-user");
+
+  const usersData = document.getElementById("data");
+
+  const overlayUsers = document.getElementById("overlay-users");
+  exitUser.addEventListener("click", ()=> {
+    overlayUsers.classList.toggle("hidden");
+    usersModal.classList.toggle("hidden");
+  })
+  if(isAdmin === "admin") {
+
+
+    showUsers.addEventListener("click", async () => {
+      const users = await getUsers();
+      console.log(users);
+      let mensaje = ``;
+      users.forEach((user) => {
+        const { name, role, email, password } = user;
+        mensaje += `name: ${name}
+        role: ${role}
+        email:  ${email}
+        password: ${password}<br>
+        `;
+      });
+      usersData.innerHTML = mensaje
+      overlayUsers.classList.toggle("hidden");
+      usersModal.classList.toggle("hidden");
+    });
+  }
+
 
   addButton.addEventListener("click", async () => {
     const newProduct = await Object.fromEntries(new FormData(formProduct));
@@ -246,11 +294,8 @@ async function renderSeller() {
   btnLogout.addEventListener("click", () => {
     container.classList.toggle("hidden");
     client.innerHTML = ` `;
+    localStorage.clear()
   });
-}
-
-async function renderAdmin() {
-  await renderSeller();
 }
 
 form.addEventListener("submit", async (e) => {
@@ -262,11 +307,11 @@ form.addEventListener("submit", async (e) => {
   });
   if (foundUser) {
     if (foundUser?.role === "client") {
-      renderClient();
-    } else if (foundUser?.role === "seller") {
-      renderSeller();
-    } else if (foundUser?.role === "admin") {
-      renderAdmin();
+      renderClient()
+      localStorage.setItem("user", JSON.stringify({name:foundUser.name,role:foundUser.role}));
+    } else if (foundUser?.role) {
+      renderSellerorAdmin(foundUser?.role);
+      localStorage.setItem("user", JSON.stringify({name:foundUser.name,role:foundUser.role}));
     }
   } else {
     alert("incorrecto");

@@ -45,17 +45,10 @@
   ],
   "products": [
     {
-      "id": 2,
-      "type": "keyboard",
-      "stock": 15,
-      "price": 2500,
-      "url": "https://cdn11.bigcommerce.com/s-g9br3/images/stencil/2048x2048/products/845/4575/Mech-kb_Front_WP__11847.1659653762.jpg?c=2"
-    },
-    {
       "id": 3,
       "type": "monitor",
-      "stock": 8,
-      "price": 12000,
+      "stock": 1200,
+      "price": 2000,
       "url": "https://media.alquimio.cloud/images/@thumbs_1200_7a97940b2152368a49ac523c5eda3944ef71001e.webp"
     },
     {

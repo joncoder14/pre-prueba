@@ -4,13 +4,17 @@
   "main": "main.js",
   "scripts": {
     "server": "json-server --watch db.json --port 3000",
+
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
+  "type": "module",
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "json-server": "^0.17.4"
+    "json": "^11.0.0",
+    "json-server": "^0.17.4",
+    "server": "^1.0.42"
   }
 }
