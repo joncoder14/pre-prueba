@@ -38,22 +38,6 @@ La aplicación permite visualizar productos y realizar operaciones CRUD usando u
 - Eliminar productos
 - Gestión de inventario
 
----
-
-# 📂 Estructura del proyecto
-
-```bash
-pre-prueba-main/
-│
-├── assets/
-│   └── carShop.png
-│
-├── db.json
-├── index.html
-├── main.js
-
-
-```bash
 # 📦 Instalación y ejecución
 
 
@@ -70,3 +54,20 @@ npm install
 npm run server
 ├── package.json
 └── package-lock.json
+
+---
+
+# 📂 Estructura del proyecto
+
+```bash
+pre-prueba-main/
+│
+├── assets/
+│   └── carShop.png
+│
+├── db.json
+├── index.html
+├── main.js
+
+
+```bash
