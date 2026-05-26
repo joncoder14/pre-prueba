@@ -51,7 +51,7 @@ cd pre-prueba-main
 3️⃣ Instalar dependencias
 npm install
 
- 4️⃣ Iniciar JSON Server
+4️⃣ Iniciar JSON Server
 npm run server
 ├── package.json
 └── package-lock.json
