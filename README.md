@@ -51,5 +51,20 @@ pre-prueba-main/
 ├── db.json
 ├── index.html
 ├── main.js
+
+# 📦 Instalación y ejecución
+
+```bash
+# 1️⃣ Clonar el repositorio
+git clone URL_DEL_REPOSITORIO
+
+# 2️⃣ Entrar a la carpeta del proyecto
+cd pre-prueba-main
+
+# 3️⃣ Instalar dependencias
+npm install
+
+# 4️⃣ Iniciar JSON Server
+npm run server
 ├── package.json
 └── package-lock.json
