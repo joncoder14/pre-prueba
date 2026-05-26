@@ -52,9 +52,11 @@ pre-prueba-main/
 ├── index.html
 ├── main.js
 
-# 📦 Instalación y ejecución
 
 ```bash
+# 📦 Instalación y ejecución
+
+
 # 1️⃣ Clonar el repositorio
 git clone URL_DEL_REPOSITORIO
 
