@@ -38,23 +38,6 @@ La aplicación permite visualizar productos y realizar operaciones CRUD usando u
 - Eliminar productos
 - Gestión de inventario
 
-
-# 📦 Instalación y ejecución
-
-
-1️⃣ Clonar el repositorio
-git clone URL_DEL_REPOSITORIO
-
-2️⃣ Entrar a la carpeta del proyecto
-cd pre-prueba-main
-
-3️⃣ Instalar dependencias
-npm install
-
-4️⃣ Iniciar JSON Server
-npm run server
-├── package.json
-└── package-lock.json
 ---
 
 # 📂 Estructura del proyecto
@@ -68,7 +51,30 @@ pre-prueba-main/
 ├── db.json
 ├── index.html
 ├── main.js
+├── package.json
+└── package-lock.json
+```
 
+---
+
+# 📦 Instalación y ejecución
 
 ```bash
+# 1️⃣ Clonar el repositorio
+git clone URL_DEL_REPOSITORIO
 
+# 2️⃣ Entrar a la carpeta del proyecto
+cd pre-prueba-main
+
+# 3️⃣ Instalar dependencias
+npm install
+
+# 4️⃣ Iniciar JSON Server
+npm run server
+```
+
+Esto iniciará la API en:
+
+```bash
+http://localhost:3000
+```
